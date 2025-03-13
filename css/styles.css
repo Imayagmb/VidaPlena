@@ -552,22 +552,37 @@ input:checked+.slider:before {
 } */
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
     .sidebar {
-        width: 70px;
+        width: 60px;
+        padding: 10px;
     }
 
-    .sidebar span {
+    .logo span {
         display: none;
     }
 
     .main-content {
-        margin-left: 70px;
-        width: calc(100% - 70px);
+        margin-left: 60px;
+        width: calc(100% - 60px);
+        padding: 10px;
     }
 
-    .resumo-grid {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .bem-vindo-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resumo-grid,
+    .cards-grid {
         grid-template-columns: 1fr;
     }
 
@@ -579,9 +594,64 @@ input:checked+.slider:before {
         grid-template-columns: 1fr;
     }
 
-    /* footer {
-        width: calc(100% - 70px);
-        margin-left: 70px;
-    } */
-  
+    .header-icones {
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    .meta-card i {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .user-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .contato-card, .medic-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sidebar span {
+        display: none;
+    }
+
+    .sidebar {
+        width: 60px;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .bem-vindo-content h2 {
+        display: none;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bem-vindo-content {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .header-icones {
+        font-size: 1.2rem;
+    }
 }
