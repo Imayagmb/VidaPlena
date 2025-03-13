@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Saúde</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/pulse.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="light-mode">
+    <nav class="sidebar">
+      <div class="logo">
+        <i class="ri-heart-pulse-fill"></i>
+        <span>VidaPlena</span>
+      </div>
+      <ul class="nav-links">
+        <li data-page="inicio" class="active">
+          <i class="ri-home-4-line"></i>
+          <span>Início</span>
+        </li>
+        <li data-page="metas">
+          <i class="ri-flag-line"></i>
+          <span>Metas</span>
+        </li>
+        <li data-page="alimentacao">
+          <i class="ri-restaurant-line"></i>
+          <span>Alimentação</span>
+        </li>
+        <li data-page="historico">
+          <i class="ri-hospital-line"></i>
+          <span>Histórico Médico</span>
+        </li>
+        <li data-page="contatos">
+          <i class="ri-contacts-line"></i>
+          <span>Contatos de Emergência</span>
+        </li>
+        <li data-page="configuracoes">
+          <i class="ri-settings-3-line"></i>
+          <span>Configurações</span>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <header>
+        <h1>Dashboard de Saúde</h1>
+        <div class="header-icones">
+          <button id="alterar-tema">
+            <i class="ri-sun-line"></i>
+          </button>
+          <i class="ri-notification-3-line"></i>
+          <i class="ri-user-3-line"></i>
+        </div>
+      </header>
+
+      <!-- Início -->
+      <section id="inicio" class="page active">
+        <div class="bem-vindo-banner">
+          <div class="bem-vindo-content">
+            <h2>Bem-vindo(a) ao seu Dashboard de Saúde</h2>
+            <div class="user-info">
+              <div class="user-avatar">
+                <i class="ri-user-smile-line"></i>
+              </div>
+              <div class="user-details">
+                <h3>Olá, Jhonas</h3>
+                <p>Acompanhe sua saúde de forma simples e eficiente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resumo-section">
+          <h3>Resumo do Dia</h3>
+          <div class="resumo-grid">
+            <div class="resumo-card">
+              <div class="card-header">
+                <i class="ri-award-line"></i>
+                <h4>Metas Diárias</h4>
+              </div>
+              <div class="progresso-list">
+                <div class="progresso-item">
+                  <span>Passos</span>
+                  <div class="progresso-bar">
+                    <div class="progresso" style="width: 50%"></div>
+                  </div>
+                  <span>5000/10000</span>
+                </div>
+                <div class="progresso-item">
+                  <span>Água</span>
+                  <div class="progresso-bar">
+                    <div class="progresso" style="width: 75%"></div>
+                  </div>
+                  <span>1.5L/2L</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="resumo-card">
+              <div class="card-header">
+                <i class="ri-restaurant-line"></i>
+                <h4>Alimentação de Hoje</h4>
+              </div>
+              <div class="alimentacao-resumo">
+                <div class="alimentacao-item">
+                  <span>Café da Manhã</span>
+                  <p>Pão integral, ovos e café</p>
+                </div>
+                <div class="alimentacao-item">
+                  <span>Almoço</span>
+                  <p>Arroz, feijão e frango grelhado</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="resumo-card">
+              <div class="card-header">
+                <i class="ri-heart-pulse-line"></i>
+                <h4>Status de Saúde</h4>
+              </div>
+              <div class="status-saude">
+                <div class="status-item">
+                  <i class="ri-heart-2-line"></i>
+                  <div class="status-info">
+                    <span>Batimentos</span>
+                    <p>72 bpm</p>
+                  </div>
+                </div>
+                <div class="status-item">
+                  <i class="ri-zzz-line"></i>
+                  <div class="status-info">
+                    <span>Sono</span>
+                    <p>7h30min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metas -->
+      <section id="metas" class="page">
+        <h2>Metas de Saúde</h2>
+        <div class="cards-grid">
+          <div class="meta-card">
+            <i class="ri-footprint-line"></i>
+            <h3>Passos Diários</h3>
+            <p>5.000 / 10.000</p>
+          </div>
+          <div class="meta-card">
+            <i class="ri-drop-line"></i>
+            <h3>Água (ml)</h3>
+            <p>1500 / 2000</p>
+          </div>
+          <div class="meta-card">
+            <i class="ri-zzz-line"></i>
+            <h3>Sono (horas)</h3>
+            <p>7 / 8</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alimentação -->
+      <section id="alimentacao" class="page">
+        <h2>Registro Alimentar</h2>
+        <div class="alimentacao-form">
+          <div class="alimentacao-input">
+            <h3>Café da Manhã</h3>
+            <textarea placeholder="Digite seus alimentos..."></textarea>
+          </div>
+          <div class="alimentacao-input">
+            <h3>Almoço</h3>
+            <textarea placeholder="Digite seus alimentos..."></textarea>
+          </div>
+          <div class="alimentacao-input">
+            <h3>Lanche</h3>
+            <textarea placeholder="Digite seus alimentos..."></textarea>
+          </div>
+          <div class="alimentacao-input">
+            <h3>Jantar</h3>
+            <textarea placeholder="Digite seus alimentos..."></textarea>
+          </div>
+          <button class="save-btn">Salvar Registro</button>
+        </div>
+      </section>
+
+      <!-- Histórico Médico -->
+      <section id="historico" class="page">
+        <h2>Histórico Médico</h2>
+        <div class="medic-container">
+          <div class="medic-card">
+            <div class="card-header">
+              <i class="ri-user-heart-line"></i>
+              <h3>Dados Pessoais</h3>
+            </div>
+            <div class="medic-form">
+              <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" value="Jhonas Silva" disabled />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Data de Nascimento</label>
+                  <input type="date" value="1970-01-01" readonly />
+                </div>
+                <div class="form-group">
+                  <label>Tipo Sanguíneo</label>
+                  <input type="text" value="A+" readonly />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Sexo</label>
+                <input type="text" value="Masculino" readonly />
+              </div>
+              <div class="form-group">
+                <label>Condições Médicas</label>
+                <textarea readonly>Hipertensão controlada</textarea>
+              </div>
+              <div class="form-group">
+                <label>Alergias</label>
+                <textarea readonly>Penicilina</textarea>
+              </div>
+              <div class="form-group">
+                <label>Cirurgias Anteriores</label>
+                <textarea readonly>Remoção de projétil (1995)</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contatos de Emergência -->
+      <section id="contatos" class="page">
+        <h2>Contatos de Emergência</h2>
+        <div class="contato-container">
+          <div class="contato-lista"></div>
+          <div class="add-contato-form">
+            <div class="form-group">
+              <label>Nome Completo</label>
+              <input
+                type="text"
+                id="contato-name"
+                placeholder="Digite o nome completo"
+              />
+            </div>
+            <div class="form-group">
+              <label>Telefone</label>
+              <input
+                type="tel"
+                id="contato-phone"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label>E-mail</label>
+              <input
+                type="email"
+                id="contato-email"
+                placeholder="email@exemplo.com"
+              />
+            </div>
+            <button class="add-contato-btn">
+              <i class="ri-user-add-line"></i>
+              Adicionar Contato
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Configurações -->
+      <section id="configuracoes" class="page">
+        <h2>Configurações</h2>
+        <div class="configuracao-container">
+          <div class="configuracao-card">
+            <div class="card-header">
+              <i class="ri-notification-4-line"></i>
+              <h3>Notificações</h3>
+            </div>
+            <div class="configuracao-list">
+              <div class="configuracao-item">
+                <div class="configuracao-info">
+                  <span class="configuracao-titulo">Notificações Push</span>
+                  <span class="configuracao-descricao"
+                    >Receba alertas importantes</span
+                  >
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="configuracao-item">
+                <div class="configuracao-info">
+                  <span class="configuracao-titulo">E-mails</span>
+                  <span class="configuracao-descricao"
+                    >Receba relatórios semanais</span
+                  >
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="configuracao-item">
+                <div class="configuracao-info">
+                  <span class="configuracao-titulo">Sons</span>
+                  <span class="configuracao-descricao"
+                    >Sons de notificação</span
+                  >
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="configuracao-card">
+            <div class="card-header">
+              <i class="ri-palette-line"></i>
+              <h3>Aparência</h3>
+            </div>
+            <div class="configuracao-list">
+              <div class="configuracao-item">
+                <div class="configuracao-info">
+                  <span class="configuracao-titulo">Modo Escuro</span>
+                  <span class="configuracao-descricao"
+                    >Alterar tema do aplicativo</span
+                  >
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" id="tema-checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <p>&copy; 2025 VidaPlena - Todos os direitos reservados</p>
+    </footer> -->
+
+    <script>
+      // Navegação entre páginas
+      document.querySelectorAll(".nav-links li").forEach((item) => {
+        item.addEventListener("click", () => {
+          // ACTIVE é removida da seção
+          document
+            .querySelectorAll(".nav-links li")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+
+          // ACTIVE é Adicionada a seção correspondente ao link clicado
+          const pageId = item.getAttribute("data-page");
+          document.querySelectorAll(".page").forEach((page) => {
+            page.classList.remove("active");
+          });
+          document.getElementById(pageId).classList.add("active");
+        });
+      });
+
+      // Dark Mode
+      const themeToggle = document.getElementById("alterar-tema");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const icon = themeToggle.querySelector("i");
+        if (body.classList.contains("dark-mode")) {
+          icon.classList.remove("ri-sun-line");
+          icon.classList.add("ri-moon-line");
+        } else {
+          icon.classList.remove("ri-moon-line");
+          icon.classList.add("ri-sun-line");
+        }
+      });
+
+      // Alterar tema na configuração
+      const themeSwitch = document.getElementById("tema-checkbox");
+      themeSwitch.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+        const themeToggleIcon = document.querySelector("#alterar-tema i");
+        if (document.body.classList.contains("dark-mode")) {
+          themeToggleIcon.className = "ri-moon-line";
+        } else {
+          themeToggleIcon.className = "ri-sun-line";
+        }
+      });
+
+      // Sincronizar botão de troca de tema com o interruptor de configuração
+      document.getElementById("alterar-tema").addEventListener("click", () => {
+        themeSwitch.checked = document.body.classList.contains("dark-mode");
+      });
+
+      // Salvar formulário de alimentação
+      document.querySelector(".save-btn")?.addEventListener("click", () => {
+        alert("Registro alimentar salvo com sucesso!");
+      });
+    </script>
+  </body>
+</html>
