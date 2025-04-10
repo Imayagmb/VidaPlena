@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard de Saúde</title>
+    <title>VidaPlena</title>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -42,12 +42,16 @@
           <i class="ri-settings-3-line"></i>
           <span>Configurações</span>
         </li>
+        <li data-page="tarefas">
+          <i class="ri-list-check"></i>
+          <span>Lista de Tarefas</span>
+        </li>
       </ul>
     </nav>
 
     <main class="main-content">
       <header>
-        <h1>Dashboard de Saúde</h1>
+        <h1>Viva uma vida plena</h1>
         <div class="header-icones">
           <button id="alterar-tema">
             <i class="ri-sun-line"></i>
@@ -61,12 +65,11 @@
       <section id="inicio" class="page active">
         <div class="bem-vindo-banner">
           <div class="bem-vindo-content">
-            <h2>Bem-vindo(a) ao seu Dashboard de Saúde</h2>
+            <h2>Bem-vindo(a) ao seu planejamento de vida</h2>
             <div class="user-info">
-              
               <div class="user-details">
                 <h3>Olá, Jhonas</h3>
-                <p>Acompanhe sua saúde de forma simples e eficiente.</p>
+                <p>Organize sua vida de forma simples e eficiente.</p>
               </div>
             </div>
           </div>
@@ -341,6 +344,31 @@
           </div>
         </div>
       </section>
+
+      <!-- Lista de Tarefas -->
+      <section id="tarefas" class="page">
+        <h2>Lista de Tarefas</h2>
+        <div class="todo-container">
+          <form id="todo-form" class="todo-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="todo-input"
+                placeholder="Adicionar nova tarefa..."
+                maxlength="100"
+              />
+              <button type="submit">
+                <i class="ri-add-line"></i>
+              </button>
+            </div>
+            <span class="error-message"></span>
+          </form>
+          <ul id="todo-list" class="todo-list"></ul>
+          <p id="alert-message" class="alert-message">
+            Nenhuma tarefa adicionada ainda
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- <footer>
@@ -404,5 +432,7 @@
         alert("Registro alimentar salvo com sucesso!");
       });
     </script>
+
+    <script src="Js/script.js"></script>
   </body>
 </html>
